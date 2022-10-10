@@ -30,7 +30,7 @@ export default function RenderLogin() {
         navigate('/home');
       })
       .catch((err) => {
-        console.log(err);
+        alert('Usuário inválido.');
       });
   }
 
