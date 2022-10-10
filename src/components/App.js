@@ -7,6 +7,7 @@ import TokenContext from './context/Token';
 import RenderSignUp from './authRoutes/SignUpScreen';
 import RenderHome from './Home';
 import RenderDeposit from './balanceRoutes/DepositScreen';
+import RenderPayment from './balanceRoutes/PaymentScreen';
 
 export default function App() {
   const [token, setToken] = React.useState('');
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/signup" element={<RenderSignUp />} />
           <Route path="/home" element={<RenderHome />} />
           <Route path="/deposit" element={<RenderDeposit />} />
+          <Route path="/pay" element={<RenderPayment />} />
         </Routes>
       </BrowserRouter>
     </TokenContext.Provider>
