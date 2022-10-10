@@ -77,7 +77,7 @@ export default function RenderHome() {
           </Container>
           <Container2>
             <h2>Depositar</h2>
-            <Link to="deposit">
+            <Link to="/deposit">
               <ArrowRedoOutline
                 className="arrowRight"
                 color={'#000000'}
