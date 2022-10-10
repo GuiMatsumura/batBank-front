@@ -12,6 +12,7 @@ import RenderTransfer from './balanceRoutes/TransferScreen';
 import RenderTransactions from './balanceRoutes/TransactionsScreen';
 import RenderMenu from './Menu';
 import RenderProfile from './menuRoutes/ProfileScreen';
+import RenderAboutUs from './menuRoutes/AboutUsScreen';
 
 export default function App() {
   const [token, setToken] = React.useState('');
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/transactions" element={<RenderTransactions />} />
           <Route path="/menu" element={<RenderMenu />} />
           <Route path="/profile" element={<RenderProfile />} />
+          <Route path="/aboutus" element={<RenderAboutUs />} />
         </Routes>
       </BrowserRouter>
     </TokenContext.Provider>
