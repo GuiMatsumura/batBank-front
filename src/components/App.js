@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../css/reset.css';
 import RenderLogin from './authRoutes/LoginScreen.js';
 import TokenContext from './context/Token';
+import RenderSignUp from './authRoutes/SignUpScreen';
 
 export default function App() {
   const [token, setToken] = React.useState('');
@@ -13,6 +14,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<RenderLogin />} />
+          <Route path="/signup" element={<RenderSignUp />} />
         </Routes>
       </BrowserRouter>
     </TokenContext.Provider>
