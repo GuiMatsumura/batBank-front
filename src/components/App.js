@@ -10,6 +10,7 @@ import RenderDeposit from './balanceRoutes/DepositScreen';
 import RenderPayment from './balanceRoutes/PaymentScreen';
 import RenderTransfer from './balanceRoutes/TransferScreen';
 import RenderTransactions from './balanceRoutes/TransactionsScreen';
+import RenderMenu from './Menu';
 
 export default function App() {
   const [token, setToken] = React.useState('');
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/pay" element={<RenderPayment />} />
           <Route path="/transfer" element={<RenderTransfer />} />
           <Route path="/transactions" element={<RenderTransactions />} />
+          <Route path="/menu" element={<RenderMenu />} />
         </Routes>
       </BrowserRouter>
     </TokenContext.Provider>
