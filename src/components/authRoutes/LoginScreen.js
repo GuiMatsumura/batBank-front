@@ -1,11 +1,14 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import TokenContext from '../context/Token';
 
 export default function RenderLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const [token, setToken] = useContext(TokenContext);
 
   const navigate = useNavigate();
 
@@ -22,7 +25,8 @@ export default function RenderLogin() {
 
     promise
       .then((res) => {
-        console.log(res.data);
+        setToken(res.data);
+        console.log(token);
         navigate('/home');
       })
       .catch((err) => {
