@@ -5,6 +5,7 @@ import '../css/reset.css';
 import RenderLogin from './authRoutes/LoginScreen.js';
 import TokenContext from './context/Token';
 import RenderSignUp from './authRoutes/SignUpScreen';
+import RenderHome from './Home';
 
 export default function App() {
   const [token, setToken] = React.useState('');
@@ -15,6 +16,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<RenderLogin />} />
           <Route path="/signup" element={<RenderSignUp />} />
+          <Route path="/home" element={<RenderHome />} />
         </Routes>
       </BrowserRouter>
     </TokenContext.Provider>
